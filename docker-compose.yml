@@ -11,6 +11,7 @@ services:
       - DATABASE_PASSWORD
       - PUBLIC_URL
       - IS_PROXIED
+      - NODE_ENV=production
     volumes:
       - ./:/srv/app
     ports:

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organization_roles",
+  "info": {
+    "name": "Organization Roles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contact_role": {
+      "model": "contact-roles",
+      "via": "organization_roles"
+    },
+    "organization": {
+      "model": "organizations",
+      "via": "organization_roles"
+    },
+    "contact": {
+      "model": "contacts",
+      "via": "organization_roles"
+    }
+  }
+}

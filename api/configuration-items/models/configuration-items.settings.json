@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configuration_items",
+  "info": {
+    "name": "Configuration Items",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "configuration": {
+      "type": "json"
+    },
+    "parent": {
+      "model": "configuration-items",
+      "via": "children"
+    },
+    "children": {
+      "collection": "configuration-items",
+      "via": "parent"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizations",
+  "info": {
+    "name": "Organizations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "organization_type": {
+      "via": "organizations",
+      "model": "organization-type"
+    },
+    "contacts": {
+      "collection": "contacts",
+      "via": "organizations",
+      "dominant": true
+    },
+    "organization_roles": {
+      "via": "organization",
+      "collection": "organization-roles"
+    }
+  }
+}

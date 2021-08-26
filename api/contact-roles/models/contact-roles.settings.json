@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_roles",
+  "info": {
+    "name": "Contact Roles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "organization_roles": {
+      "via": "contact_role",
+      "collection": "organization-roles"
+    }
+  }
+}

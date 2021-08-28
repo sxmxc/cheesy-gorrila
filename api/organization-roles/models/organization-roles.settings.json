@@ -19,6 +19,9 @@
     "contact": {
       "model": "contacts",
       "via": "organization_roles"
+    },
+    "contact_role": {
+      "model": "contact-roles"
     }
   }
 }

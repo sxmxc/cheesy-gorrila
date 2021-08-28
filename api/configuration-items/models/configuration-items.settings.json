@@ -26,13 +26,7 @@
       "collection": "configuration-items",
       "via": "parent"
     },
-    "datacenter": {
-      "type": "string"
-    },
     "row": {
-      "type": "string"
-    },
-    "cage": {
       "type": "string"
     },
     "serial_number": {
@@ -44,11 +38,17 @@
     "asset_tag": {
       "type": "string"
     },
-    "vendor": {
-      "type": "string"
-    },
     "device_type": {
       "model": "device-types"
+    },
+    "datacenter": {
+      "model": "datacenters"
+    },
+    "vendor": {
+      "model": "organizations"
+    },
+    "rack": {
+      "model": "configuration-items"
     }
   }
 }

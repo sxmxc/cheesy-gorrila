@@ -11,8 +11,8 @@ COPY . .
 
 ENV NODE_ENV production
 
-RUN npm build
+RUN npm run build
 
 EXPOSE 1337
 
-CMD ["yarn", "start"]
+CMD ["npm","run","start"]

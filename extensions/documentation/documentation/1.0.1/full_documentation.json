@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/28/2021 9:48:50 PM"
+    "x-generation-date": "08/28/2021 10:22:58 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6469,13 +6469,7 @@
                   "type": "string"
                 }
               },
-              "datacenter": {
-                "type": "string"
-              },
               "row": {
-                "type": "string"
-              },
-              "cage": {
                 "type": "string"
               },
               "serial_number": {
@@ -6487,10 +6481,16 @@
               "asset_tag": {
                 "type": "string"
               },
+              "device_type": {
+                "type": "string"
+              },
+              "datacenter": {
+                "type": "string"
+              },
               "vendor": {
                 "type": "string"
               },
-              "device_type": {
+              "rack": {
                 "type": "string"
               },
               "published_at": {
@@ -6529,13 +6529,7 @@
                     "type": "string"
                   }
                 },
-                "datacenter": {
-                  "type": "string"
-                },
                 "row": {
-                  "type": "string"
-                },
-                "cage": {
                   "type": "string"
                 },
                 "serial_number": {
@@ -6547,10 +6541,16 @@
                 "asset_tag": {
                   "type": "string"
                 },
+                "device_type": {
+                  "type": "string"
+                },
+                "datacenter": {
+                  "type": "string"
+                },
                 "vendor": {
                   "type": "string"
                 },
-                "device_type": {
+                "rack": {
                   "type": "string"
                 },
                 "published_at": {
@@ -6565,13 +6565,7 @@
               }
             }
           },
-          "datacenter": {
-            "type": "string"
-          },
           "row": {
-            "type": "string"
-          },
-          "cage": {
             "type": "string"
           },
           "serial_number": {
@@ -6583,9 +6577,6 @@
           "asset_tag": {
             "type": "string"
           },
-          "vendor": {
-            "type": "string"
-          },
           "device_type": {
             "required": [
               "id"
@@ -6595,6 +6586,123 @@
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "datacenter": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "vendor": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "organization_type": {
+                "type": "string"
+              },
+              "contacts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "organization_roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "rack": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "configuration": {
+                "type": "object"
+              },
+              "parent": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "row": {
+                "type": "string"
+              },
+              "serial_number": {
+                "type": "string"
+              },
+              "vendor_asset_tag": {
+                "type": "string"
+              },
+              "asset_tag": {
+                "type": "string"
+              },
+              "device_type": {
+                "type": "string"
+              },
+              "datacenter": {
+                "type": "string"
+              },
+              "vendor": {
+                "type": "string"
+              },
+              "rack": {
                 "type": "string"
               },
               "published_at": {
@@ -6631,13 +6739,7 @@
               "type": "string"
             }
           },
-          "datacenter": {
-            "type": "string"
-          },
           "row": {
-            "type": "string"
-          },
-          "cage": {
             "type": "string"
           },
           "serial_number": {
@@ -6649,10 +6751,16 @@
           "asset_tag": {
             "type": "string"
           },
+          "device_type": {
+            "type": "string"
+          },
+          "datacenter": {
+            "type": "string"
+          },
           "vendor": {
             "type": "string"
           },
-          "device_type": {
+          "rack": {
             "type": "string"
           },
           "published_at": {
@@ -6778,6 +6886,9 @@
                   "type": "string"
                 },
                 "contact": {
+                  "type": "string"
+                },
+                "contact_role": {
                   "type": "string"
                 },
                 "published_at": {
@@ -6995,6 +7106,28 @@
               }
             }
           },
+          "contact_role": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7007,6 +7140,9 @@
             "type": "string"
           },
           "contact": {
+            "type": "string"
+          },
+          "contact_role": {
             "type": "string"
           },
           "published_at": {
@@ -7200,6 +7336,9 @@
                   "type": "string"
                 },
                 "contact": {
+                  "type": "string"
+                },
+                "contact_role": {
                   "type": "string"
                 },
                 "published_at": {

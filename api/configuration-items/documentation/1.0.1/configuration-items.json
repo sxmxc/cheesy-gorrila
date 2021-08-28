@@ -564,13 +564,7 @@
                   "type": "string"
                 }
               },
-              "datacenter": {
-                "type": "string"
-              },
               "row": {
-                "type": "string"
-              },
-              "cage": {
                 "type": "string"
               },
               "serial_number": {
@@ -582,10 +576,16 @@
               "asset_tag": {
                 "type": "string"
               },
+              "device_type": {
+                "type": "string"
+              },
+              "datacenter": {
+                "type": "string"
+              },
               "vendor": {
                 "type": "string"
               },
-              "device_type": {
+              "rack": {
                 "type": "string"
               },
               "published_at": {
@@ -624,13 +624,7 @@
                     "type": "string"
                   }
                 },
-                "datacenter": {
-                  "type": "string"
-                },
                 "row": {
-                  "type": "string"
-                },
-                "cage": {
                   "type": "string"
                 },
                 "serial_number": {
@@ -642,10 +636,16 @@
                 "asset_tag": {
                   "type": "string"
                 },
+                "device_type": {
+                  "type": "string"
+                },
+                "datacenter": {
+                  "type": "string"
+                },
                 "vendor": {
                   "type": "string"
                 },
-                "device_type": {
+                "rack": {
                   "type": "string"
                 },
                 "published_at": {
@@ -660,13 +660,7 @@
               }
             }
           },
-          "datacenter": {
-            "type": "string"
-          },
           "row": {
-            "type": "string"
-          },
-          "cage": {
             "type": "string"
           },
           "serial_number": {
@@ -678,9 +672,6 @@
           "asset_tag": {
             "type": "string"
           },
-          "vendor": {
-            "type": "string"
-          },
           "device_type": {
             "required": [
               "id"
@@ -690,6 +681,123 @@
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "datacenter": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "vendor": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "organization_type": {
+                "type": "string"
+              },
+              "contacts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "organization_roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "rack": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "configuration": {
+                "type": "object"
+              },
+              "parent": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "row": {
+                "type": "string"
+              },
+              "serial_number": {
+                "type": "string"
+              },
+              "vendor_asset_tag": {
+                "type": "string"
+              },
+              "asset_tag": {
+                "type": "string"
+              },
+              "device_type": {
+                "type": "string"
+              },
+              "datacenter": {
+                "type": "string"
+              },
+              "vendor": {
+                "type": "string"
+              },
+              "rack": {
                 "type": "string"
               },
               "published_at": {
@@ -726,13 +834,7 @@
               "type": "string"
             }
           },
-          "datacenter": {
-            "type": "string"
-          },
           "row": {
-            "type": "string"
-          },
-          "cage": {
             "type": "string"
           },
           "serial_number": {
@@ -744,10 +846,16 @@
           "asset_tag": {
             "type": "string"
           },
+          "device_type": {
+            "type": "string"
+          },
+          "datacenter": {
+            "type": "string"
+          },
           "vendor": {
             "type": "string"
           },
-          "device_type": {
+          "rack": {
             "type": "string"
           },
           "published_at": {

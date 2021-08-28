@@ -1,7 +1,7 @@
 version: '3'
 services:
   strapi:
-    image: strapi/strapi
+    image: sxmxc/api-strapi:latest
     environment:
       - DATABASE_CLIENT
       - DATABASE_NAME
@@ -12,7 +12,5 @@ services:
       - PUBLIC_URL
       - IS_PROXIED
       - NODE_ENV=production
-    volumes:
-      - ./:/srv/app
     ports:
       - '1337:1337'

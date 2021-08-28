@@ -593,6 +593,9 @@
                 "contact": {
                   "type": "string"
                 },
+                "contact_role": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

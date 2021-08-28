@@ -25,6 +25,30 @@
     "children": {
       "collection": "configuration-items",
       "via": "parent"
+    },
+    "datacenter": {
+      "type": "string"
+    },
+    "row": {
+      "type": "string"
+    },
+    "cage": {
+      "type": "string"
+    },
+    "serial_number": {
+      "type": "string"
+    },
+    "vendor_asset_tag": {
+      "type": "string"
+    },
+    "asset_tag": {
+      "type": "string"
+    },
+    "vendor": {
+      "type": "string"
+    },
+    "device_type": {
+      "model": "device-types"
     }
   }
 }

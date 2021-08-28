@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "contact_roles",
+  "collectionName": "device_types",
   "info": {
-    "name": "Contact Roles"
+    "name": "Device Types"
   },
   "options": {
     "increments": true,

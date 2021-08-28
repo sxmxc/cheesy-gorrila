@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/configuration-items": {
+    "/device-types": {
       "get": {
         "deprecated": false,
-        "description": "Find all the configuration-items's records",
+        "description": "Find all the device-types's records",
         "responses": {
           "200": {
-            "description": "Retrieve configuration-items document(s)",
+            "description": "Retrieve device-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Configuration-items"
+          "Device-types"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new configuration-items record",
+        "description": "Create a new device-types record",
         "responses": {
           "200": {
-            "description": "Retrieve configuration-items document(s)",
+            "description": "Retrieve device-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Configuration-items"
+          "Device-types"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewConfiguration-items"
+                "$ref": "#/components/schemas/NewDevice-types"
               }
             }
           }
         }
       }
     },
-    "/configuration-items/count": {
+    "/device-types/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of configuration-items documents",
+        "description": "Retrieve the number of device-types documents",
         "responses": {
           "200": {
-            "description": "Retrieve configuration-items document(s)",
+            "description": "Retrieve device-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Configuration-items"
+          "Device-types"
         ],
         "parameters": []
       }
     },
-    "/configuration-items/{id}": {
+    "/device-types/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one configuration-items record",
+        "description": "Find one device-types record",
         "responses": {
           "200": {
-            "description": "Retrieve configuration-items document(s)",
+            "description": "Retrieve device-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Configuration-items"
+          "Device-types"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single configuration-items record",
+        "description": "Update a single device-types record",
         "responses": {
           "200": {
-            "description": "Retrieve configuration-items document(s)",
+            "description": "Retrieve device-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Configuration-items"
+          "Device-types"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewConfiguration-items"
+                "$ref": "#/components/schemas/NewDevice-types"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single configuration-items record",
+        "description": "Delete a single device-types record",
         "responses": {
           "200": {
-            "description": "deletes a single configuration-items based on the ID supplied",
+            "description": "deletes a single device-types based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Configuration-items"
+          "Device-types"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Configuration-items": {
+      "Device-types": {
         "required": [
           "id"
         ],
@@ -538,216 +538,15 @@
           "name": {
             "type": "string"
           },
-          "configuration": {
-            "type": "object"
-          },
-          "parent": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "configuration": {
-                "type": "object"
-              },
-              "parent": {
-                "type": "string"
-              },
-              "children": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "datacenter": {
-                "type": "string"
-              },
-              "row": {
-                "type": "string"
-              },
-              "cage": {
-                "type": "string"
-              },
-              "serial_number": {
-                "type": "string"
-              },
-              "vendor_asset_tag": {
-                "type": "string"
-              },
-              "asset_tag": {
-                "type": "string"
-              },
-              "vendor": {
-                "type": "string"
-              },
-              "device_type": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "children": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "configuration": {
-                  "type": "object"
-                },
-                "parent": {
-                  "type": "string"
-                },
-                "children": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "datacenter": {
-                  "type": "string"
-                },
-                "row": {
-                  "type": "string"
-                },
-                "cage": {
-                  "type": "string"
-                },
-                "serial_number": {
-                  "type": "string"
-                },
-                "vendor_asset_tag": {
-                  "type": "string"
-                },
-                "asset_tag": {
-                  "type": "string"
-                },
-                "vendor": {
-                  "type": "string"
-                },
-                "device_type": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "datacenter": {
-            "type": "string"
-          },
-          "row": {
-            "type": "string"
-          },
-          "cage": {
-            "type": "string"
-          },
-          "serial_number": {
-            "type": "string"
-          },
-          "vendor_asset_tag": {
-            "type": "string"
-          },
-          "asset_tag": {
-            "type": "string"
-          },
-          "vendor": {
-            "type": "string"
-          },
-          "device_type": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewConfiguration-items": {
+      "NewDevice-types": {
         "properties": {
           "name": {
-            "type": "string"
-          },
-          "configuration": {
-            "type": "object"
-          },
-          "parent": {
-            "type": "string"
-          },
-          "children": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "datacenter": {
-            "type": "string"
-          },
-          "row": {
-            "type": "string"
-          },
-          "cage": {
-            "type": "string"
-          },
-          "serial_number": {
-            "type": "string"
-          },
-          "vendor_asset_tag": {
-            "type": "string"
-          },
-          "asset_tag": {
-            "type": "string"
-          },
-          "vendor": {
-            "type": "string"
-          },
-          "device_type": {
             "type": "string"
           },
           "published_at": {

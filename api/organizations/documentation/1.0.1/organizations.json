@@ -609,9 +609,6 @@
                 "id": {
                   "type": "string"
                 },
-                "contact_role": {
-                  "type": "string"
-                },
                 "organization": {
                   "type": "string"
                 },

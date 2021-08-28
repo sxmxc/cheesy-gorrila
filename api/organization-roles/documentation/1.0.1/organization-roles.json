@@ -535,34 +535,6 @@
           "id": {
             "type": "string"
           },
-          "contact_role": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "organization_roles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "organization": {
             "required": [
               "id"
@@ -651,9 +623,6 @@
       },
       "NewOrganization-roles": {
         "properties": {
-          "contact_role": {
-            "type": "string"
-          },
           "organization": {
             "type": "string"
           },

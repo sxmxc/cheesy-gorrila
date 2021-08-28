@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "datacenters",
+  "info": {
+    "name": "Datacenters"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    }
+  }
+}

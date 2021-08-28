@@ -538,37 +538,6 @@
           "name": {
             "type": "string"
           },
-          "organization_roles": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "contact_role": {
-                  "type": "string"
-                },
-                "organization": {
-                  "type": "string"
-                },
-                "contact": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -579,12 +548,6 @@
         "properties": {
           "name": {
             "type": "string"
-          },
-          "organization_roles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",

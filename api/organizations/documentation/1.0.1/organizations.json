@@ -609,13 +609,13 @@
                 "id": {
                   "type": "string"
                 },
-                "contact_role": {
-                  "type": "string"
-                },
                 "organization": {
                   "type": "string"
                 },
                 "contact": {
+                  "type": "string"
+                },
+                "organization_role": {
                   "type": "string"
                 },
                 "published_at": {

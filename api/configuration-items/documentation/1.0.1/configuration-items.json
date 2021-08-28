@@ -564,6 +564,15 @@
                   "type": "string"
                 }
               },
+              "rack": {
+                "type": "string"
+              },
+              "datacenter": {
+                "type": "string"
+              },
+              "vendor": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -600,6 +609,15 @@
                     "type": "string"
                   }
                 },
+                "rack": {
+                  "type": "string"
+                },
+                "datacenter": {
+                  "type": "string"
+                },
+                "vendor": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -609,6 +627,108 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "rack": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "configuration": {
+                "type": "object"
+              },
+              "parent": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "rack": {
+                "type": "string"
+              },
+              "datacenter": {
+                "type": "string"
+              },
+              "vendor": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "datacenter": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "vendor": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "organization_type": {
+                "type": "string"
+              },
+              "contacts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "organization_roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -634,6 +754,15 @@
             "items": {
               "type": "string"
             }
+          },
+          "rack": {
+            "type": "string"
+          },
+          "datacenter": {
+            "type": "string"
+          },
+          "vendor": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

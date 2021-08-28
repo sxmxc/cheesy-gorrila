@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "contact_role": {
-      "model": "contact-roles",
-      "via": "organization_roles"
-    },
     "organization": {
       "model": "organizations",
       "via": "organization_roles"
@@ -23,6 +19,9 @@
     "contact": {
       "model": "contacts",
       "via": "organization_roles"
+    },
+    "organization_role": {
+      "model": "organization-roles"
     }
   }
 }

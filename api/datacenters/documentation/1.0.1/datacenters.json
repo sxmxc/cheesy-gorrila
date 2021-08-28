@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/organization-roles": {
+    "/datacenters": {
       "get": {
         "deprecated": false,
-        "description": "Find all the organization-roles's records",
+        "description": "Find all the datacenters's records",
         "responses": {
           "200": {
-            "description": "Retrieve organization-roles document(s)",
+            "description": "Retrieve datacenters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Datacenters"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Organization-roles"
+          "Datacenters"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new organization-roles record",
+        "description": "Create a new datacenters record",
         "responses": {
           "200": {
-            "description": "Retrieve organization-roles document(s)",
+            "description": "Retrieve datacenters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Datacenters"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Organization-roles"
+          "Datacenters"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrganization-roles"
+                "$ref": "#/components/schemas/NewDatacenters"
               }
             }
           }
         }
       }
     },
-    "/organization-roles/count": {
+    "/datacenters/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of organization-roles documents",
+        "description": "Retrieve the number of datacenters documents",
         "responses": {
           "200": {
-            "description": "Retrieve organization-roles document(s)",
+            "description": "Retrieve datacenters document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Organization-roles"
+          "Datacenters"
         ],
         "parameters": []
       }
     },
-    "/organization-roles/{id}": {
+    "/datacenters/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one organization-roles record",
+        "description": "Find one datacenters record",
         "responses": {
           "200": {
-            "description": "Retrieve organization-roles document(s)",
+            "description": "Retrieve datacenters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Datacenters"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Organization-roles"
+          "Datacenters"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single organization-roles record",
+        "description": "Update a single datacenters record",
         "responses": {
           "200": {
-            "description": "Retrieve organization-roles document(s)",
+            "description": "Retrieve datacenters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Datacenters"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Organization-roles"
+          "Datacenters"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrganization-roles"
+                "$ref": "#/components/schemas/NewDatacenters"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single organization-roles record",
+        "description": "Delete a single datacenters record",
         "responses": {
           "200": {
-            "description": "deletes a single organization-roles based on the ID supplied",
+            "description": "deletes a single datacenters based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Organization-roles"
+          "Datacenters"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Organization-roles": {
+      "Datacenters": {
         "required": [
           "id"
         ],
@@ -535,113 +522,8 @@
           "id": {
             "type": "string"
           },
-          "organization": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "organization_type": {
-                "type": "string"
-              },
-              "contacts": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "organization_roles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "contact": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "first_name": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "organizations": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "organization_roles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "organization_role": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "organization": {
-                "type": "string"
-              },
-              "contact": {
-                "type": "string"
-              },
-              "organization_role": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "Name": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -649,15 +531,9 @@
           }
         }
       },
-      "NewOrganization-roles": {
+      "NewDatacenters": {
         "properties": {
-          "organization": {
-            "type": "string"
-          },
-          "contact": {
-            "type": "string"
-          },
-          "organization_role": {
+          "Name": {
             "type": "string"
           },
           "published_at": {
@@ -674,5 +550,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Datacenters"
+    }
+  ]
 }

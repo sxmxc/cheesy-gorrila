@@ -25,6 +25,15 @@
     "children": {
       "collection": "configuration-items",
       "via": "parent"
+    },
+    "rack": {
+      "model": "configuration-items"
+    },
+    "datacenter": {
+      "model": "datacenters"
+    },
+    "vendor": {
+      "model": "organizations"
     }
   }
 }

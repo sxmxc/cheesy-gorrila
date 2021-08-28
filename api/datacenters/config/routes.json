@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/datacenters",
+      "handler": "datacenters.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/datacenters/count",
+      "handler": "datacenters.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/datacenters/:id",
+      "handler": "datacenters.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/datacenters",
+      "handler": "datacenters.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/datacenters/:id",
+      "handler": "datacenters.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/datacenters/:id",
+      "handler": "datacenters.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
